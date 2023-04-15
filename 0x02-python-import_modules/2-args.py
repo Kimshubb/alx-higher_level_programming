@@ -10,7 +10,6 @@ if __name__ == "__main__":
     else:
         print(" {} arguments".format(num_args))
     if num_args == 1:
-        print("Argument:")
         print("1: {}".format(args[0]))
     else:
         print("Arguments:")
