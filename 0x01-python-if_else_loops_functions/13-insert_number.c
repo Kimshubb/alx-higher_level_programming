@@ -16,7 +16,7 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		return NULL;
 	}
-	new_node->data = number;
+	new_node->n = number;
 	new_node->next = NULL;
 	/*IF THE LIST IS EMPTY insert the new node at the beginning*/
 	if (*head == NULL)
@@ -32,8 +32,8 @@ listint_t *insert_node(listint_t **head, int number)
 		return new_node;
 	}
 	listint_t *current = *head;
-
-	while (current->next != NULL && current->next->data <= number)
+	/*transverse through list to find insertion point*/
+	while (current->next != NULL && current->next->n <= number)
 	{
 		current = current->next;
 	}
