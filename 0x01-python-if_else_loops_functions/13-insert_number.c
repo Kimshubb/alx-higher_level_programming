@@ -25,13 +25,13 @@ listint_t *insert_node(listint_t **head, int number)
 		return new_node;
 	}
 	/*to insert node at the beginning*/
-	if (number < (*head)->data)
+	if (number < (*head)->n)
 	{
 		new_node->next = *head;
 		*head = new_node;
 		return new_node;
 	}
-	listint_t *current = *head;
+	current = *head;
 	/*transverse through list to find insertion point*/
 	while (current->next != NULL && current->next->n <= number)
 	{
