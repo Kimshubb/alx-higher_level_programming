@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-# Author - Bamidele Adefolaju
 
-def magic_calculation(a, b, c)
-if a < b:
-    return(c)
-if c > b:
-    return(a + b)
-return(a*b - c)
+def magic_calculation(a, b, c):
+    if b < a:
+        return(c)
+    if b > c:
+        return(a + b)
+    else:
+        return(a * b - c)
