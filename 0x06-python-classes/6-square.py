@@ -2,7 +2,7 @@
 '''Define a new class Square'''
 class Square:
     '''initialize the new square'''
-    def __init__(self, size=0, position=(0, 0):
+    def __init__(self, size=0, position=(0, 0)):
         '''Initialize the new square
         Args: size - of int type
             raises Typeerror if not integer
@@ -41,7 +41,7 @@ class Square:
             raise Type ERROR if value is not a tuple of 2 positive integers
 
         '''
-        if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(i, int)) and i >= 0 for i in value:
+        if (not isinstance(value, tuple) or len(value) != 2 or not all(i >= 0 for i in value)):
             raise TypeError("position must be a tuple of two positive integerrs")
         self.__position = value
 
@@ -50,12 +50,18 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-    '''print #  for each value of area'''
-    if self.__size == 0:
-        print("")
-    else:
-        for _ in range(self.__size):
-            print('#' * self.__size)
+        '''print #  for each value of area'''
+        if self.__size == 0:
+            print("")
+            return
+        [print("") for i in range(0, self.__position[1])]
+        for i in range(0, self.__size):
+            for j in range(0, self.__position[0]):
+                print(" ", end="")
+            for k in range(0, self.__size):
+                print("#", end="")
+            print("")
+
 
     
 
