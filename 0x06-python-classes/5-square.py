@@ -2,7 +2,7 @@
 '''Class defination'''
 class Square:
     '''Class square attributes'''
-    def __init__(self, size):
+    def __init__(self, size = 0):
         '''Initialize a square
         Args - size int -size of the square
         '''
@@ -27,10 +27,9 @@ class Square:
     def my_print(self):
         '''Print the square with # character'''
         if self.__size == 0:
-            print("")
+            print()
         else:
-            for i in range(0, self.__size):
-                [print("#", end="") for j in range(self.__size)]
-		print("")
+            for _ in range(self.__size):
+		print("#" * self.size)
         
 
