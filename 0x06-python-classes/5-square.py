@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 '''Class defination'''
 class Square:
     '''Class square attributes'''
