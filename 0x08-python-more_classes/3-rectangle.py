@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """Defines a Rectangle class."""
 
 
@@ -52,7 +51,7 @@ class Rectangle:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
-    def __str___(self):
+    def __str__(self):
         '''string represention of rectangle using #'''
         if self.width == 0 or self.height == 0:
             return ""
