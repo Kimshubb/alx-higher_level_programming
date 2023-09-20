@@ -1,13 +1,19 @@
 #!/usr/bin/python3
+'''Defines a rectangle class'''
 class Rectangle:
     '''a rectangle class'''
+
     def __init__(self, width=0, height = 0):
-        '''initialiaze class attributes'''
+        '''initialiaze class attributes
+        Args: width(int) - width of new rectangle
+             height(int) - height of new rectangle
+        '''
         self.width = width
         self.height = height
 
     @property
     def width(self):
+        '''get/set the width of rectangle'''
         return self.__width
 
     @width.setter
