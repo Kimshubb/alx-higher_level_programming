@@ -60,4 +60,3 @@ class Rectangle:
         for _ in range(self.height):
             rect_str += "#" + "\n"
         return(rect_str.rstrip("\n"))
-
