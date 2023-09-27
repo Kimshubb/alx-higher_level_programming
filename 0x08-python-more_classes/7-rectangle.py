@@ -58,11 +58,11 @@ class Rectangle:
         '''string represention of rectangle using #'''
         if self.width == 0 or self.height == 0:
             return ""
-        return "\n".join([str(self.print_symbol)] * self.width)
+        return "\n".join([str(self.print_symbol) * self.width] * self.height)
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        Rectangle.number_of_instances += 1
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
