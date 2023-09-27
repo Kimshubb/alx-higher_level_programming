@@ -55,8 +55,4 @@ class Rectangle:
         '''string represention of rectangle using #'''
         if self.width == 0 or self.height == 0:
             return ""
-
-        rect_str = ""
-        for _ in range(self.height):
-            rect_str += "#" + "\n"
-        return(rect_str.rstrip("\n"))
+        return "\n".join(["#" * self.width] * self.height)
