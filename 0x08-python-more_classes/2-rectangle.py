@@ -14,7 +14,7 @@ class Rectangle:
         self.height = height
     
     @property
-    def width(self, width):
+    def width(self):
         '''gets the width'''
         return self.__width
 
@@ -28,7 +28,7 @@ class Rectangle:
         self.__width = value
 
     @property
-    def height(self, height):
+    def height(self):
         '''encapsulates data'''
         return self.__height
 
@@ -41,7 +41,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    def erea(self):
+    def area(self):
         '''returns the area'''
         return (self.__width * self.__height)
 
