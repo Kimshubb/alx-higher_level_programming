@@ -43,19 +43,19 @@ class Rectangle:
 
     def area(self):
         """Return the area of the Rectangle."""
-        return (self.__width * self.__height)
+        return (self.width * self.height)
 
     def perimeter(self):
         """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return (0)
-        return ((self.__width * 2) + (self.__height * 2))
+        return ((self.width * 2) + (self.height * 2))
 
     def __str__(self):
         '''string represention of rectangle using #'''
         if self.width == 0 or self.height == 0:
             return ""
-        return (str(self.print_symbol * self.width + "\n" *self.height)
+        return "\n".join(["#" * self.width] * self.height)
 
     def __repr__(self):
-        return f"Rectangle({self.__width}, {self.__height})"
+        return f"Rectangle({self.width}, {self.height})"
