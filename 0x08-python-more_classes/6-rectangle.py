@@ -61,7 +61,7 @@ class Rectangle:
         rect_str = ""
         for _ in range(self.height):
             rect_str += "#" + "\n"
-        return(rect_str.rstrip("\n"))
+        return (rect_str.rstrip("\n"))
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
