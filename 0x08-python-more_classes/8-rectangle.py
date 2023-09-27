@@ -62,7 +62,7 @@ class Rectangle:
         rect_str = ""
         for _ in range(self.height):
             rect_str += str(Rectangle.print_symbol) * self.__width + "\n"
-        return(rect_str.rstrip("\n"))
+        return (rect_str.rstrip("\n"))
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
@@ -70,7 +70,6 @@ class Rectangle:
     def __del__(self):
         Rectangle.number_of_instances += 1
         print("Bye rectangle...")
-    
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
@@ -85,4 +84,3 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-
