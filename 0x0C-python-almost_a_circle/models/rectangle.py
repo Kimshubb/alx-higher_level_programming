@@ -87,15 +87,28 @@ class Rectangle(Base):
     def __str__(self):
         '''Overide the __str__ method to return a formatted string'''
         return "[Rectangle] (<id>) <x>/<y> - <width>/<height>".format(self.id, self.x, self.y, self.width, self.height)
-     def update(self, *args):
-	     if args:
-		     if len(args) >= 1:
-			     self.id = args[0]
-		     if len(args) >= 2:
-		             self.width = args[1]
-	     	     if len(args) >= 3:
-		             self.height = args[2]
-	             if len(args) >= 4:
-		             self.x = args[3]
-	     	     if len(args) >= 5:
-		             self.y = args[4]
+    '''
+    commented this out to keep implementation of *args 
+    remain ordered
+    def update(self, *args):
+	    if args:
+		    if len(args) >= 1:
+			    self.id = args[0]
+		    if len(args) >= 2:
+		            self.width = args[1]
+	     	    if len(args) >= 3:
+		            self.height = args[2]
+	            if len(args) >= 4:
+		            self.x = args[3]
+	     	    if len(args) >= 5:
+		            self.y = args[4]
+      '''
+      def update(self, *args, **kwargs):
+	      if args:
+		      attributes = ["id", "width", "height", "x", "y"]
+		      for attribute, value in zip(attributes, args):
+			      setattr(self, attribute, value)
+		      else:
+			      for key, value in kwargs.items():
+				      if hasattr(self, key):
+					      setattr(self, key, value)
