@@ -1,4 +1,4 @@
---- creates second table in the database hbtn0c_0 and add multiple rows
+-- creates second table in the database hbtn0c_0 and add multiple rows
 CREATE TABLE IF NOT EXISTS hbtn_0c_0.second_table (
    id INT,
    name VARCHAR(256),
