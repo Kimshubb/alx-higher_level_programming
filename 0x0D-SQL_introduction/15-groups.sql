@@ -1,5 +1,4 @@
--- displays all records with the same score in second table IN DESC
-USE hbtn_0c_0;
+-- lists all records with the same score in the second table
 SELECT `score`, COUNT(*) AS `number`
 FROM `second_table`
 GROUP BY `score`
