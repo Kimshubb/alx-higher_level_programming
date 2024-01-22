@@ -1,1 +1,1 @@
-Javascript warm up
+Learning Javascript warm up
