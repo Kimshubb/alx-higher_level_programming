@@ -10,8 +10,8 @@ def filter_states_by_name(username, password, database, state_name):
             password=password
             db=database)
     cursor = connection.cursor()
-    query = """SELECT * FROM states WHERE name = "{}" ORDER BY states.id ASC;""".format(state_name)
-    cursor.execute(query)
+    query = """SELECT * FROM states WHERE name = %s ORDER BY states.id ASC;"""
+    cursor.execute(query,(state_name,))
     results = cursor.fetchall()
     for result in results:
         print(result)
