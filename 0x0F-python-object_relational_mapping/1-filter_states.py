@@ -1,8 +1,16 @@
 #!/usr/bin/python3
 import MySQLdb
 import sys
-"""List states with n"""
+
 def list_states_with_n(username, password, database):
+    """
+    Lists states from MySql db that starts with 'N'
+    Args: username(STR) : MySQL username
+          password(str) :MySQL password
+          database(str) :MySql database
+    returns:
+            none
+    """
     connection = MySQLdb.connect(
             host='localhost',
             port=3306,
