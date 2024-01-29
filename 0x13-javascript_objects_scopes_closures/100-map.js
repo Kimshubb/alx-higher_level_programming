@@ -1,6 +1,4 @@
 #!/usr/bin/node
-#!/usr/bin/node
-
 const data = require('./100-data');
 const list = data.list;
 
